@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Project Template</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link
+      rel="shortcut icon"
+      href="public/assets/icon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="p-2 h-screen w-screen grid place-content-center bg-sky-700">
+      <main
+        class="p-2 overflow-hidden flex flex-col h-fit gap-2 rounded shadow-2xl bg-slate-50"
+      >
+        <h1 class="text-4xl font-bold">ToDo List</h1>
+        <div id="controls" class="gap-2 flex flex-col place-content-center">
+          <form id="form" action="">
+            <label for="input">
+              <input
+                type="text"
+                name="input"
+                id="input"
+                class="bg-slate-200 rounded-md shadow-xl p-1 focus:outline-slate-300"
+                placeholder="Type your next task here"
+              />
+            </label>
+            <button
+              class="bg-blue-800 text-slate-50 rounded-full p-1.5 shadow-xl"
+              id="createBtn"
+            >
+              Create
+            </button>
+          </form>
+          <div
+            id="errorMsg"
+            class="bg-red-400 rounded p-0.5 hidden place-content-center"
+          >
+            <p>Type your task correctly</p>
+          </div>
+        </div>
+        <div id="todos">
+          <ul id="toDos" class="list-disc list-inside gap-2 flex flex-col"></ul>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="JS/main.js"></script>
+</html>
